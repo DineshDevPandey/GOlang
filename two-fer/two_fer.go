@@ -1,20 +1,13 @@
-// This is a "stub" file.  It's a little start on your solution.
-// It's not a complete solution though; you have to write some code.
-
-// Package twofer should have a package comment that summarizes what it's about.
-// https://golang.org/doc/effective_go.html#commentary
+// package twofer implements sharing functions 
 package twofer
 
-import "fmt"
-
-// ShareWith should have a comment documenting it.
+// ShareWith returns sharing with whome.
+// it takes an argument name, if no name is passed it will treat it as "you"
 func ShareWith(name string) string {
 
-	// if name is blank
 	if name == "" {
-		return "One for you, one for me."
+		name = "you"
 	}
 
-	// if name is passed
-	return fmt.Sprintf("One for %s, one for me.", name)
+	return "One for " + name + ", one for me."
 }
